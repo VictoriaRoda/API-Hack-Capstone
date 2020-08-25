@@ -1,0 +1,52 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+input {
+
+}
+
+number-size {
+  width: 10px;
+}
+
+button, input[type="text"] {
+
+}
+
+button, input[type="submit"] {
+
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 10px;
+  max-width: 500px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.error-message {
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
+
+@media only screen and (min-width: 700px) {
+
+  button, input[type="submit"] {
+   
+ }
+}
+
+
