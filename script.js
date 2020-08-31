@@ -1,6 +1,16 @@
 'use strict';
 
+//random button//
+$('#search').click(function getRandomDrink() {
+  const url = `https://www.thecocktaildb.com/api/json/v1/1/random.php`;
+  console.log(url);
+  fetch(url)
+    .then(response => response.json())
+    .then(responseJson => displayResults(responseJson))
+    .catch(error => alert('Something went wrong. Try again later.'));
+})
 
+//search by name//
 function formatQueryParams(params) {
   let queryItems = Object.keys(params)
     .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
@@ -32,11 +42,6 @@ function getDrinkByName(name) {
 
 function getDrink(params) {
   let searchURL='https://www.thecocktaildb.com/api/json/v1/1/search.php?';
-
-  /*let params = {
-    "s": query,
-  };*/
-
   let queryString = formatQueryParams(params);
   let url = searchURL + queryString;
 
@@ -54,8 +59,6 @@ function getDrink(params) {
       $('#js-error-message').text(`Something went wrong: ${err.message}`);
     });
 }
-
-
 
 function watchForm() {
   $('form').submit(event => {
