@@ -1,21 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color: #FFFFFF;
+  background-color: #3D0817;
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Malgun Gothic";
 }
 
-input {
-
+h1 {
+  font-size: 40px;
+  text-align: left;
 }
 
-number-size {
-  width: 10px;
+p {
+  font-size: 25px;
+  text-align: left;
 }
 
-button, input[type="text"] {
-
+.wrapper {
+  width: 100%;
 }
 
-button, input[type="submit"] {
+.content-box {
+  box-sizing: content-box;
+  border: solid #4F4145 15px;
+  text-align: left;
+  font-size: 18px;
+  padding: 10px;
+}
 
+.group {
+  display: flex;
+  flex-direction: row;
+}
+
+.item {
+  flex: 1;
+  margin: 10px;
+  width: 33%;
 }
 
 ul {
@@ -44,9 +70,6 @@ li {
 
 @media only screen and (min-width: 700px) {
 
-  button, input[type="submit"] {
-   
- }
 }
 
 
