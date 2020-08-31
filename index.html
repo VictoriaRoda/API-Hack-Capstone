@@ -7,41 +7,46 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div class='container'>
-      <header>
-		    <div class="row">
-	        <h1>Libation Station</h1>
-		    </div>
-	    </header>
+    <header>
+	    
+	  </header>
 
-	    <main>
-		    <fieldset>
-			    <div class="row">
-				    <h2>Name that drink!</h2>
-				    <p>Enter the name of the cocktail you are trying to make.</p>
-			    </div>
-			    <div class="row">
-            <form id='js-form'>
+	  <main>
+      <section class="group wrapper">
+        <div class="item content-box">
+	        <h1>Welcome,</h1>
+          <p>to the Libation Station. This is a new app that features a search by cocktail name or try somehting new with a random drink recipe.</p>
+	      </div>
+        <div class="item content-box">
+          <h1>Drink</h1>
+          <p>Enter a cocktail name.
+            <form id="js-form">
               <input type="text" name="search-term" id="js-search-term" required>
-              <input type="submit" value="Cheers!">
+              <button type="submit">Cheers!</button>
+              <button onclick="document.getElementById('js-search-term').value = ''">Clear search</button>
             </form>
-          </div>
-        </fieldset>
-      </main>
-
-      <!---<form id='js-form'>
-        <label for="search-term">Search by Spirit</label>
-        <input type="text" name="search-term" id="js-search-term" required>
-        <input type="submit" value="Cheers!">
-      </form>-->
-
-      <p id='js-error-message' class='error-message'></p>
-      <section id='results' class='hidden'>
-        <h2>Search Results</h2>
-        <ul id='results-list'>
-        </ul>
+          </p>
+        </div>
+        <div class="item content-box">
+          <h1>Random</h1>
+          <p>Try something new.</p>
+            <button id='search' type="submit">Show Me!</button>
+        </div>
+        <div class="results hidden">
+          <h2>Check it out!</h2>
+            <div class="results">
+        </div>
+        <section class="notfound">        
+        </section>
       </section>
-    </div>
+    </main>
+
+    <p id='js-error-message' class='error-message'></p>
+    <section id='results' class='hidden'>
+      <h2>Search Results</h2><div class="search-total"></div>
+      <ul id='results-list'>
+      </ul>
+    </section>
 
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
