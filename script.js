@@ -20,7 +20,7 @@ function formatQueryParams(params) {
 //display search total//
 function searchTotal(responseJson){
   $("#search-total").empty();
-  let totalHtml=`<p>${responseJson.drinks.length} total recipes</p>`;
+  let totalHtml=`<p>${responseJson.drinks.length} total recipe(s)</p>`;
   $("#search-total").append(totalHtml);
 }
 
