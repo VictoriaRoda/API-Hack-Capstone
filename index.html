@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="eng">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,22 +8,19 @@
   </head>
   <body>
     <header>
-	    
+	    <h1>Welcome!</h1>
+        <p>This is the <b><a href="https://victoriaroda.github.io/Libation-Station/">Libation Station</a></b>. This is a new app that features a search by cocktail name or try somehting new with a random drink recipe.</p>
 	  </header>
 
 	  <main>
       <section class="group wrapper">
-        <div class="item content-box">
-	        <h1>Welcome,</h1>
-          <p>to the Libation Station. This is a new app that features a search by cocktail name or try somehting new with a random drink recipe.</p>
-	      </div>
         <div class="item content-box">
           <h1>Drink</h1>
           <p>Enter a cocktail name.
             <form id="js-form">
               <input type="text" name="search-term" id="js-search-term" required>
               <button type="submit">Cheers!</button>
-              <button onclick="document.getElementById('js-search-term').value = ''">Clear search</button>
+              <button onclick="document.getElementById('js-search-term').value = ''">Clear search field</button>
             </form>
           </p>
         </div>
@@ -32,18 +29,14 @@
           <p>Try something new.</p>
             <button id='search' type="submit">Show Me!</button>
         </div>
-        <div class="results hidden">
-          <h2>Check it out!</h2>
-            <div class="results">
-        </div>
-        <section class="notfound">        
-        </section>
       </section>
     </main>
 
     <p id='js-error-message' class='error-message'></p>
     <section id='results' class='hidden'>
-      <h2>Search Results</h2><div class="search-total"></div>
+      <h2>Search Results</h2>
+      <div id="search-total">
+      </div>
       <ul id='results-list'>
       </ul>
     </section>
