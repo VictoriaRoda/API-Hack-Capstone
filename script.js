@@ -80,14 +80,12 @@ function displayResults(responseJson) {
     $('#results-list').append(
     `<li><h3>${responseJson.drinks[i].strDrink}</h3>
     <img src="${responseJson.drinks[i].strDrinkThumb}/preview">
-    <p>Category: ${responseJson.drinks[i].strIBA}</p>
     <p>Ingredients:
     ${ingredientList}</li>
     <li>${responseJson.drinks[i].strInstructions}</p>
     </li>`
     )};
   $('#results').removeClass('hidden');
-  $('main').html('results');
   searchTotal(responseJson);
 };
 
