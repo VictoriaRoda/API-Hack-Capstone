@@ -4,24 +4,46 @@
 
 html {
   color: #FFFFFF;
-  background-color: #3D0817;
 }
 
 body {
   font-family: "Malgun Gothic";
+  background-color: #3b3b3b;
 }
 
 header {
   text-align: center;
-  font-size: 30px;
+  font-size: 25px;
+  background-color: #14213D;
+  padding: 5px;
 }
 
-a:link {
-  color:#FFFFFF;
+h2 {
+  font-size: 35px;
 }
 
-a:visited {
-  color: lightblue;
+button {
+  background-color: #FCA311;
+  color: black;
+  padding: 1px;
+  display: inline-block;
+  font-size: 15px;
+  text-align: center;
+  text-decoration:;
+  margin: 5px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition-duration: 0.4s;
+  
+}
+
+button:hover {
+  background-color: white;
+}
+
+input {
+  font-size: 20px;
+  margin-right: 5px;
 }
 
 .wrapper {
@@ -30,9 +52,9 @@ a:visited {
 
 .content-box {
   box-sizing: content-box;
-  border: solid #4F4145 15px;
+  border: solid #FCA311 15px;
   font-size: 25px;
-  padding: 10px;
+  padding: 1px;
   text-align: center;
 }
 
@@ -50,7 +72,8 @@ a:visited {
 ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin-left: %;
+  text-align: center;
 }
 
 li {
@@ -71,6 +94,30 @@ li {
   display: none;
 }
 
+@media only screen and (min-width: 280px) {
+  .wrapper {
+    width: auto;
+    margin: 1px;
+  }
+
+  .group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item {
+    margin: 0px;
+    width: auto;
+  }
+
+  input {
+    font-size: 15px;
+    margin-right: auto;
+    margin-left: 5px;
+    margin-bottom:
+  }
+}
+
 @media only screen and (max-width: 450px) {
   .wrapper {
     width: auto;
@@ -87,7 +134,35 @@ li {
     width: auto;
   }
 
-  
+  input {
+    font-size: auto;
+    margin-right: auto;
+    margin-left: 5px;
+    margin-bottom:
+  }
 }
 
+@media only screen and (min-width: 500px) {
+  .wrapper {
+    width: auto;
+    margin: 1px;
+  }
+
+  .group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+ .item {
+    margin: 0px;
+    width: auto;
+  }
+
+  input {
+    font-size: auto;
+    margin-right: auto;
+    margin-left: 5px;
+    margin-bottom:
+  }
+}
 
