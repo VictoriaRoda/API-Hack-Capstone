@@ -12,3 +12,5 @@ I used HTML, CSS, JavaScript, and jQuery to develop a simple way to search for a
 Enter a drink name to find recipes for that drink. If you are interested in a drink you have never had before, the random drink recipe feature will pop out a random recipe and will keep giving you a new one every time you click to generate one. Keep clicking until you find one you like!
 
 # Screenshots
+![Main Page](LibationMain.png "Main Page")
+![Recipe Page](LibationRecipe.png "Recipe Page")
