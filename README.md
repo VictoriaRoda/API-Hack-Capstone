@@ -14,3 +14,7 @@ Enter a drink name to find recipes for that drink. If you are interested in a dr
 # Screenshots
 ![Main Page](LibationMain.png "Main Page")
 ![Recipe Page](LibationRecipe.png "Recipe Page")
+
+# Acknowledgements
+TheCocktailDB
+https://www.thecocktaildb.com/api.php
