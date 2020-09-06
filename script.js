@@ -31,63 +31,31 @@ function displayResults(responseJson) {
 	let separator = '';
 	let space = ' ';
 	
-  console.log(responseJson);
   $('#results-list').empty();
   for (let i = 0; i < responseJson.drinks.length; i++){
-	if(responseJson.drinks[i].strMeasure1 !=null){
-		ingredientList += responseJson.drinks[i].strMeasure1;
-	}
-	if($(responseJson.drinks[i].strIngredient1) !=null){
-		ingredientList += space + responseJson.drinks[i].strIngredient1;
-		separator = ', '
-	}
-	if(responseJson.drinks[i].strMeasure2 !=null){
-		ingredientList += separator + responseJson.drinks[i].strMeasure2;
-		if(responseJson.drinks[i].strIngredient2 !=null){
-		ingredientList += space + responseJson.drinks[i].strIngredient2;
-		separator = ', '
-	    }
-	} else {
-	  if(responseJson.drinks[i].strIngredient2 !=null){
-		ingredientList += separator + responseJson.drinks[i].strIngredient2;
-		separator = ', '
-	   }
-	}
-	if(responseJson.drinks[i].strMeasure3 !=null){
-		ingredientList += separator + responseJson.drinks[i].strMeasure3;
-		if(responseJson.drinks[i].strIngredient3 !=null){
-		ingredientList += space + responseJson.drinks[i].strIngredient3;
-		separator = ', '
-	    }
-	} else {
-	  if(responseJson.drinks[i].strIngredient3 !=null){
-		ingredientList += separator + responseJson.drinks[i].strIngredient3;
-		separator = ', '
-	   }
-	}
-	if(responseJson.drinks[i].strMeasure4 !=null){
-		ingredientList += separator + responseJson.drinks[i].strMeasure4;
-		if(responseJson.drinks[i].strIngredient4 !=null){
-		ingredientList += space + responseJson.drinks[i].strIngredient4;
-		separator = ', '
-	    }
-	} else {
-	  if(responseJson.drinks[i].strIngredient4 !=null){
-		ingredientList += separator + responseJson.drinks[i].strIngredient4;
-		separator = ', '
-	   }
-	}
-    $('#results-list').append(
-    `<li><h3>${responseJson.drinks[i].strDrink}</h3>
-    <img src="${responseJson.drinks[i].strDrinkThumb}/preview">
-    <p>Ingredients:
-    ${ingredientList}</li>
-    <li>${responseJson.drinks[i].strInstructions}</p>
-    </li>`
-    )};
+    for (let f = 0; f < 16; f++){
+      console.log("strMeasure"+(f+1));
+      if (responseJson.drinks[i]["strMeasure"+(f+1)]!=null){
+        ingredientList+=responseJson.drinks[i]["strMeasure"+(f+1)];
+      }
+      if (responseJson.drinks[i]["strIngredient"+(f+1)]!=null){
+        ingredientList+=responseJson.drinks[i]["strIngredient"+(f+1)];
+      }
+    }
+  $('#results-list').append(addResult(responseJson.drinks[i], ingredientList));
+  }
   $('#results').removeClass('hidden');
   searchTotal(responseJson);
 };
+
+function addResult(drink, ingredientList) {
+  return `<li><h3>${drink.strDrink}</h3>
+    <img src="${drink.strDrinkThumb}/preview" alt=${drink.strDrink}>
+    <p>Ingredients:
+    ${ingredientList}</li>
+    <li>${drink.strInstructions}</p>
+    </li>`;
+}
 
 //paramaters for the api//
 function getDrinkByName(name) {
@@ -114,7 +82,8 @@ function getDrink(params) {
     })
     .then(responseJson => displayResults(responseJson))
     .catch(err => {
-      $('#js-error-message').text(`Something went wrong: ${err.message}`);
+      console.log("error:", err);
+      alert(`Something went wrong! Try again with a different cocktail name.`);
     });
 }
 
