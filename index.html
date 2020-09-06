@@ -19,20 +19,19 @@
 	    <p>Enter a cocktail name.</p>
             <form id="js-form">
               <input type="text" name="search-term" id="js-search-term" required>
-              <button type="submit">Cheers!</button>
-              <button onclick="document.getElementById('js-search-term').value = ''">New Search</button>
+              <button type="submit" name="drink" id="cheers">Cheers!</button>
+              <button type="submit" name="new-search" id="clear" onclick="document.getElementById('js-search-term').value = ''">New Search</button>
             </form>
         </div>
         <div class="item content-box">
           <h2>Random</h2>
           <p>Try something new.</p>
-            <button id='search' type="submit">Show Me!</button>
+            <button type="submit" id="search" >Show Me!</button>
         </div>
       </section>
     </main>
 
-    <p id='js-error-message' class='error-message'></p>
-    <section id='results' class='hidden'>
+    <section id="results" class="hidden">
       <h2>Search Results</h2>
       <div id="search-total">
       </div>
