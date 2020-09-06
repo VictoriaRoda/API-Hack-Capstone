@@ -50,6 +50,10 @@ input {
   margin-right: 5px;
 }
 
+results-list {
+  align-content: center;
+}
+
 .wrapper {
   width: 100%;
 }
@@ -60,7 +64,6 @@ input {
   font-size: 25px;
   padding: 1px;
   text-align: center;
-  justify-content: space-around;
 }
 
 .group {
@@ -74,15 +77,20 @@ input {
   width: 33%;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+#results {
   text-align: center;
 }
 
+ul {
+  border: solid #FCA311 15px;
+  font-size: 20px;
+  padding: 1px;
+  list-style: none;
+  
+}
+
 li {
-  padding: 10px;
-  max-width: 500px;
+  text-align: center;
 }
 
 .container {
@@ -90,84 +98,64 @@ li {
   margin: auto;
 }
 
-.error-message {
-  color: red;
-}
-
 .hidden {
   display: none;
 }
 
-@media only screen and (max-width: 280px) {
-  .wrapper {
-    width: auto;
-    margin: 1px;
-  }
-
-  .group {
+@media screen and (min-width: 280px) {
+   .group {
     display: flex;
     flex-direction: column;
   }
 
   .item {
-    margin: 0px;
+    margin: 25px;
     width: auto;
+  }
+
+  p {
+    margin: 25px;
   }
 
   input {
-    font-size: 15px;
-    margin-right: auto;
+    font-size: 12px;
+    margin-right: 1px;
     margin-left: 5px;
-    margin-bottom:
   }
-  
 }
 
-@media only screen and (max-width: 450px) {
-  .wrapper {
-    width: auto;
-    margin: 1px;
-  }
-
-  .group {
+@media screen and (min-width: 360px) {
+   .group {
     display: flex;
     flex-direction: column;
   }
 
   .item {
-    margin: 0px;
+    margin: 25px;
     width: auto;
   }
 
+  p {
+    margin: 25px;
+  }
+
   input {
-    font-size: auto;
-    margin-right: auto;
+    font-size: 20px;
+    margin-right: 1px;
     margin-left: 5px;
-    margin-bottom:
+    margin-bottom: 5px;
   }
 }
 
-@media only screen and (max-width: 540px) {
-  .wrapper {
-    width: auto;
-    margin: 1px;
-  }
-
+@media only screen and (min-width: 760px){
   .group {
     display: flex;
-    flex-direction: column;
-  }
-  
- .item {
-    margin: 0px;
-    width: auto;
+    flex-direction: row;
   }
 
-  input {
-    font-size: auto;
-    margin-right: auto;
-    margin-left: 5px;
-    margin-bottom:
+  .item {
+    margin: 10px;
+    width: 33%;
   }
 }
 
