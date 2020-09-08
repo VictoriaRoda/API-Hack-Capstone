@@ -50,7 +50,7 @@ function displayResults(responseJson) {
 
 function addResult(drink, ingredientList) {
   return `<li><h3>${drink.strDrink}</h3>
-    <img src="${drink.strDrinkThumb}/preview" alt=${drink.strDrink}>
+    <img src="${drink.strDrinkThumb}/preview" alt="${drink.strDrink}">
     <p>Ingredients:
     ${ingredientList}</li>
     <li>${drink.strInstructions}</p>
